@@ -49,7 +49,7 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
