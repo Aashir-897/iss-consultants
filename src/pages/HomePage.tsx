@@ -12,7 +12,7 @@ const DEFAULT_DESTINATIONS: Destination[] = [
 ]
 
 const SERVICES_DATA = [
-  { icon:'🎯', title:'Free Visa Assessment', desc:'Our certified consultants evaluate your profile, eligibility, and goals completely free.', features:['100% Free consultation','Eligibility assessment','Honest, transparent advice','Written summary of options'] },
+  { icon:'🎯', title:'Expert Visa Assessment', desc:'Our certified consultants provide personalized evaluation of your profile, eligibility, and goals.', features:['Comprehensive consultation','Eligibility assessment','Honest, transparent advice','Written summary of options'] },
   { icon:'📁', title:'Document Preparation', desc:'We create your personalized checklist and verify every document before submission.', features:['Personalized document checklist','Document review & verification','Translation assistance','Gap analysis'] },
   { icon:'✍️', title:'Application Processing', desc:'We handle the complete application from start to finish.', features:['Full application completion','Online portal management','Biometric booking','Real-time tracking'] },
   { icon:'🎤', title:'Interview Preparation', desc:'Mock interview sessions and expert coaching for embassy interviews.', features:['Mock interview sessions','Common Q&A guide','Presentation coaching','Embassy-specific tips'] },

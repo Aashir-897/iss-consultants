@@ -21,7 +21,7 @@ export default function ContactPage() {
             Let's Talk About<br />Your <em style={{ fontStyle:'italic', color:'var(--gold)' }}>Future</em>
           </h1>
           <p style={{ fontSize:'clamp(14px,2vw,16px)', color:'var(--text-light)', lineHeight:1.9 }}>
-            Book a free consultation. Our expert advisors will guide you towards the right visa pathway.
+            Book a consultation. Our expert advisors will guide you towards the right visa pathway.
           </p>
         </div>
       </section>
@@ -47,9 +47,9 @@ export default function ContactPage() {
               </div>
             ))}
             <div style={{ background:'var(--dark3)', padding:20, border:'1px solid rgba(201,168,76,0.1)', marginTop:24 }}>
-              <div style={{ fontSize:11, letterSpacing:2, textTransform:'uppercase', color:'var(--gold)', marginBottom:10 }}>100% Free Consultation</div>
+              <div style={{ fontSize:11, letterSpacing:2, textTransform:'uppercase', color:'var(--gold)', marginBottom:10 }}>Expert Consultation</div>
               <p style={{ fontSize:12, color:'var(--text-muted)', lineHeight:1.8 }}>
-                Initial consultations are completely free with no obligation.
+                Our consultations provide expert guidance with no obligation.
               </p>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
               <textarea className="input-field" rows={5} placeholder="Describe your situation..." value={form.message} onChange={e=>setForm({...form,message:e.target.value})} />
             </div>
             <button type="submit" className="btn-primary" disabled={submitting}>
-              {submitting ? 'Submitting...' : 'Request Free Consultation →'}
+              {submitting ? 'Submitting...' : 'Request Consultation →'}
             </button>
             <p style={{ fontSize:11, color:'var(--text-muted)', textAlign:'center' }}>We respond within 24 hours.</p>
           </form>
