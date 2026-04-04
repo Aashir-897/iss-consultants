@@ -1,8 +1,20 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const destinations = ['United Kingdom', 'Canada', 'Australia', 'United States', 'Schengen Europe']
-const services = ['Visa Counselling', 'Student Admissions', 'Work Permits', 'PR Applications', 'Interview Prep']
+const destinations = [
+  { label: 'United Kingdom', to: '/destinations/united-kingdom' },
+  { label: 'Canada', to: '/destinations/canada' },
+  { label: 'Australia', to: '/destinations/australia' },
+  { label: 'United States', to: '/destinations/united-states' },
+  { label: 'Schengen Europe', to: '/destinations/schengen' },
+]
+const services = [
+  { label: 'Visa Counselling', to: '/services/visa-counselling' },
+  { label: 'Student Admissions', to: '/services/student-admissions' },
+  { label: 'Work Permits', to: '/services/work-permits' },
+  { label: 'PR Applications', to: '/services/pr-applications' },
+  { label: 'Interview Prep', to: '/services/interview-prep' },
+]
 const company = [
   { label: 'About Us', to: '/about' },
   { label: 'Blog', to: '/blog' },
