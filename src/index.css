@@ -294,4 +294,6 @@ p { line-height: 1.75; }
   .team-grid { grid-template-columns: 1fr; }
   .process-steps-grid { grid-template-columns: 1fr; }
   .hero-stats-mobile { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .stats-detail-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
 }
