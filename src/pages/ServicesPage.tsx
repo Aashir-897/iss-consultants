@@ -32,14 +32,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services grid - NO inline gridTemplateColumns */}
+      {/* Services grid */}
       <section style={{ padding:'60px 24px 80px', background:'var(--dark)' }}>
         <div ref={r1} className="reveal">
           <div className="services-page-grid">
             {services.map((s, i) => (
-              <div key={i} style={{ background:'var(--dark3)', padding:'clamp(28px,4vw,44px) clamp(24px,3vw,40px)', position:'relative', overflow:'hidden', border:'1px solid rgba(255,255,255,0.03)', transition:'border-color 0.3s' }}>
+              <Link key={i} to={`/services/${s.slug}`} style={{ background:'var(--dark3)', padding:'clamp(28px,4vw,44px) clamp(24px,3vw,40px)', position:'relative', overflow:'hidden', border:'1px solid rgba(255,255,255,0.03)', transition:'border-color 0.3s', textDecoration:'none', display:'block' }}>
+                <div style={{ position:'absolute', top:24, right:24, color:'var(--gold)', fontSize:18, opacity:0.4 }}>↗</div>
                 <div style={{ fontSize:40, marginBottom:20 }}>{s.icon}</div>
-                <h3 style={{ fontFamily:'Cormorant Garamond, serif', fontSize:'clamp(20px,3vw,26px)', fontWeight:300, marginBottom:14 }}>{s.title}</h3>
+                <h3 style={{ fontFamily:'Cormorant Garamond, serif', fontSize:'clamp(20px,3vw,26px)', fontWeight:300, marginBottom:14, color:'var(--cream)' }}>{s.title}</h3>
                 <p style={{ fontSize:13, color:'var(--text-muted)', lineHeight:1.8, marginBottom:24 }}>{s.desc}</p>
                 <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:8 }}>
                   {s.features.map((f, j) => (
