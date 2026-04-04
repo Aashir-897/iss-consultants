@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 
 const WhatsAppFloat = () => (
-  <a href="https://wa.me/923315690099" target="_blank" rel="noreferrer"
+  <a href="https://wa.me/923122857196" target="_blank" rel="noreferrer"
     style={{ position:'fixed', bottom:24, right:24, zIndex:99, background:'var(--gold)', color:'var(--dark)', width:52, height:52, display:'flex', alignItems:'center', justifyContent:'center', fontSize:22, cursor:'pointer', boxShadow:'0 8px 32px rgba(201,168,76,0.3)', textDecoration:'none', transition:'all 0.3s', borderRadius:2 }}
     onMouseEnter={e => { e.currentTarget.style.transform='translateY(-4px)' }}
     onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)' }}
