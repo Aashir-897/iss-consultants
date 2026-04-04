@@ -1,8 +1,20 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const destinations = ['United Kingdom', 'Canada', 'Australia', 'United States', 'Schengen Europe']
-const services = ['Visa Counselling', 'Student Admissions', 'Work Permits', 'PR Applications', 'Interview Prep']
+const destinations = [
+  { label: 'United Kingdom', to: '/destinations/united-kingdom' },
+  { label: 'Canada', to: '/destinations/canada' },
+  { label: 'Australia', to: '/destinations/australia' },
+  { label: 'United States', to: '/destinations/united-states' },
+  { label: 'Schengen Europe', to: '/destinations/schengen' },
+]
+const services = [
+  { label: 'Visa Counselling', to: '/services/visa-counselling' },
+  { label: 'Student Admissions', to: '/services/student-admissions' },
+  { label: 'Work Permits', to: '/services/work-permits' },
+  { label: 'PR Applications', to: '/services/pr-applications' },
+  { label: 'Interview Prep', to: '/services/interview-prep' },
+]
 const company = [
   { label: 'About Us', to: '/about' },
   { label: 'Blog', to: '/blog' },
@@ -67,17 +79,21 @@ export default function Footer() {
             </div>
           </div>
 
-          {['Destinations', 'Services', 'Company'].map((heading, hi) => (
+          {[
+            { heading: 'Destinations', items: destinations },
+            { heading: 'Services', items: services },
+            { heading: 'Company', items: company },
+          ].map(({ heading, items }) => (
             <div key={heading}>
               <h4 style={{ fontSize: 11, letterSpacing: 2, textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 16, fontFamily: 'DM Sans, sans-serif' }}>{heading}</h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {(hi === 0 ? destinations : hi === 1 ? services : company.map(c => c.label)).map((item, i) => (
+                {items.map((item, i) => (
                   <li key={i}>
-                    <Link to={hi === 2 ? company[i].to : hi === 0 ? '/destinations' : '/services'}
+                    <Link to={item.to}
                       style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: 13, transition: 'color 0.3s' }}
                       onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
                       onMouseLeave={e => e.currentTarget.style.color = 'var(--text-muted)'}
-                    >{item}</Link>
+                    >{item.label}</Link>
                   </li>
                 ))}
               </ul>

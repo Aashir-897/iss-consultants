@@ -3,15 +3,15 @@ import PublicLayout from '@/components/layout/PublicLayout'
 import { useReveal } from '@/hooks/useReveal'
 
 const services = [
-  { icon:'🎯', title:'Visa Assessment & Counselling', desc:'A thorough evaluation of your profile to determine the most suitable visa category.', features:['Free initial consultation','Eligibility assessment','Alternative pathways','Realistic timeline estimation','Written summary report'] },
-  { icon:'📁', title:'Document Preparation', desc:'We create a detailed, personalized checklist and guide you through every required document.', features:['Personalized document checklist','Notarization guidance','Translation services','Document gap analysis','Pre-submission review'] },
-  { icon:'✍️', title:'Application Processing', desc:'Our experts handle the complete application process from forms to appointments.', features:['Full form completion','Online portal management','Biometric booking','Courier management','Real-time updates'] },
-  { icon:'🎤', title:'Interview Preparation', desc:'Structured coaching sessions to build confidence for embassy interviews.', features:['Mock interview sessions','Common Q&A guide','Body language coaching','Dress code guidance','Industry-specific prep'] },
-  { icon:'🎓', title:'Student Admissions', desc:'We partner with 200+ universities to match students with the right programs.', features:['University shortlisting','SOP writing','Application follow-up','Scholarship assistance','Enrollment support'] },
-  { icon:'🏠', title:'Accommodation Guidance', desc:'We connect students with trusted accommodation providers.', features:['University residences','Private accommodation','Area safety analysis','Shared housing coordination','Arrival support'] },
-  { icon:'💼', title:'Work Permit Services', desc:'Comprehensive support through every step of the work permit application.', features:['Employer sponsorship','LMIA assistance','Skills assessment','Points optimization','Post-arrival support'] },
-  { icon:'🌍', title:'Permanent Residency', desc:'Expert guidance through complex PR pathways including Express Entry.', features:['PR eligibility assessment','Express Entry optimization','Points maximization','PNP guidance','Citizenship planning'] },
-  { icon:'✈️', title:'Pre-Departure Briefing', desc:'Comprehensive briefing to ensure you are fully prepared for life abroad.', features:['Arrival procedures','Banking setup','Cultural briefing','Healthcare registration','Emergency contacts'] },
+  { icon:'🎯', slug:'visa-counselling', title:'Visa Assessment & Counselling', desc:'A thorough evaluation of your profile to determine the most suitable visa category.', features:['Free initial consultation','Eligibility assessment','Alternative pathways','Realistic timeline estimation','Written summary report'] },
+  { icon:'📁', slug:'document-preparation', title:'Document Preparation', desc:'We create a detailed, personalized checklist and guide you through every required document.', features:['Personalized document checklist','Notarization guidance','Translation services','Document gap analysis','Pre-submission review'] },
+  { icon:'✍️', slug:'application-processing', title:'Application Processing', desc:'Our experts handle the complete application process from forms to appointments.', features:['Full form completion','Online portal management','Biometric booking','Courier management','Real-time updates'] },
+  { icon:'🎤', slug:'interview-prep', title:'Interview Preparation', desc:'Structured coaching sessions to build confidence for embassy interviews.', features:['Mock interview sessions','Common Q&A guide','Body language coaching','Dress code guidance','Industry-specific prep'] },
+  { icon:'🎓', slug:'student-admissions', title:'Student Admissions', desc:'We partner with 200+ universities to match students with the right programs.', features:['University shortlisting','SOP writing','Application follow-up','Scholarship assistance','Enrollment support'] },
+  { icon:'🏠', slug:'accommodation', title:'Accommodation Guidance', desc:'We connect students with trusted accommodation providers.', features:['University residences','Private accommodation','Area safety analysis','Shared housing coordination','Arrival support'] },
+  { icon:'💼', slug:'work-permits', title:'Work Permit Services', desc:'Comprehensive support through every step of the work permit application.', features:['Employer sponsorship','LMIA assistance','Skills assessment','Points optimization','Post-arrival support'] },
+  { icon:'🌍', slug:'pr-applications', title:'Permanent Residency', desc:'Expert guidance through complex PR pathways including Express Entry.', features:['PR eligibility assessment','Express Entry optimization','Points maximization','PNP guidance','Citizenship planning'] },
+  { icon:'✈️', slug:'pre-departure', title:'Pre-Departure Briefing', desc:'Comprehensive briefing to ensure you are fully prepared for life abroad.', features:['Arrival procedures','Banking setup','Cultural briefing','Healthcare registration','Emergency contacts'] },
 ]
 
 export default function ServicesPage() {
@@ -32,14 +32,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services grid - NO inline gridTemplateColumns */}
+      {/* Services grid */}
       <section style={{ padding:'60px 24px 80px', background:'var(--dark)' }}>
         <div ref={r1} className="reveal">
           <div className="services-page-grid">
             {services.map((s, i) => (
-              <div key={i} style={{ background:'var(--dark3)', padding:'clamp(28px,4vw,44px) clamp(24px,3vw,40px)', position:'relative', overflow:'hidden', border:'1px solid rgba(255,255,255,0.03)', transition:'border-color 0.3s' }}>
+              <Link key={i} to={`/services/${s.slug}`} style={{ background:'var(--dark3)', padding:'clamp(28px,4vw,44px) clamp(24px,3vw,40px)', position:'relative', overflow:'hidden', border:'1px solid rgba(255,255,255,0.03)', transition:'border-color 0.3s', textDecoration:'none', display:'block' }}>
+                <div style={{ position:'absolute', top:24, right:24, color:'var(--gold)', fontSize:18, opacity:0.4 }}>↗</div>
                 <div style={{ fontSize:40, marginBottom:20 }}>{s.icon}</div>
-                <h3 style={{ fontFamily:'Cormorant Garamond, serif', fontSize:'clamp(20px,3vw,26px)', fontWeight:300, marginBottom:14 }}>{s.title}</h3>
+                <h3 style={{ fontFamily:'Cormorant Garamond, serif', fontSize:'clamp(20px,3vw,26px)', fontWeight:300, marginBottom:14, color:'var(--cream)' }}>{s.title}</h3>
                 <p style={{ fontSize:13, color:'var(--text-muted)', lineHeight:1.8, marginBottom:24 }}>{s.desc}</p>
                 <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:8 }}>
                   {s.features.map((f, j) => (
@@ -49,7 +50,7 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
