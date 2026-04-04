@@ -56,7 +56,7 @@ export default function Navbar() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Link to="/contact" className="btn-outline hidden md:inline-block" style={{ padding: '9px 20px', fontSize: 11 }}>
-            Free Consultation
+            Book Consultation
           </Link>
           <button
             onClick={() => setOpen(!open)}
@@ -87,7 +87,7 @@ export default function Navbar() {
           </Link>
         ))}
         <Link to="/contact" className="btn-primary" style={{ marginTop: 16 }}>
-          Free Consultation
+          Book Consultation
         </Link>
         <div style={{ marginTop: 8, fontSize: 13, color: 'var(--text-muted)' }}>+92 331 5690099</div>
       </div>

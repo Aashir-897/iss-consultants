@@ -317,7 +317,7 @@ export default function HomePage() {
               Start Your <em style={{ fontStyle:'italic', color:'var(--gold)' }}>Journey</em> Today
             </h2>
             <p style={{ fontSize:14, color:'var(--text-muted)', lineHeight:1.8, marginBottom:40 }}>
-              Book a free consultation with ISS and take the first step towards your international future.
+              Book a consultation with ISS and take the first step towards your international future.
             </p>
             {[
               { icon:'📍', label:'Office', value:'Lahore, Pakistan' },
@@ -372,7 +372,7 @@ export default function HomePage() {
               <textarea className="input-field" rows={4} placeholder="Tell us about your situation..." value={form.message} onChange={e => setForm({...form,message:e.target.value})} />
             </div>
             <button type="submit" className="btn-primary" disabled={submitting}>
-              {submitting ? 'Submitting...' : 'Request Free Consultation →'}
+              {submitting ? 'Submitting...' : 'Request Consultation →'}
             </button>
           </form>
         </div>

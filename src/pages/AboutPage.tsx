@@ -124,9 +124,9 @@ export default function AboutPage() {
             Ready to Begin Your <em style={{ fontStyle:'italic', color:'var(--gold)' }}>Journey?</em>
           </h2>
           <p style={{ fontSize:14, color:'var(--text-muted)', marginBottom:40, maxWidth:440, margin:'0 auto 40px' }}>
-            Schedule a free consultation today.
+            Schedule a consultation today.
           </p>
-          <Link to="/contact" className="btn-primary">Get Free Consultation</Link>
+          <Link to="/contact" className="btn-primary">Get Consultation</Link>
         </div>
       </section>
     </PublicLayout>

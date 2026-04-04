@@ -318,9 +318,9 @@ export default function ServiceDetailPage() {
           Ready to <em style={{ fontStyle: 'italic', color: 'var(--gold)' }}>Get Started</em>?
         </h2>
         <p style={{ fontSize: 15, color: 'var(--text-muted)', marginBottom: 40, maxWidth: 480, margin: '0 auto 40px' }}>
-          Book a free consultation to discuss {service.title.toLowerCase()}.
+          Book a consultation to discuss {service.title.toLowerCase()}.
         </p>
-        <Link to="/contact" className="btn-primary">Book Free Consultation</Link>
+        <Link to="/contact" className="btn-primary">Book Consultation</Link>
       </section>
     </PublicLayout>
   )

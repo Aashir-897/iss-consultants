@@ -264,7 +264,7 @@ export default function DestinationDetailPage() {
         <p style={{ fontSize: 15, color: 'var(--text-muted)', marginBottom: 40, maxWidth: 480, margin: '0 auto 40px' }}>
           Book a free consultation with our {dest.name} visa specialists today.
         </p>
-        <Link to="/contact" className="btn-primary">Book Free Consultation</Link>
+        <Link to="/contact" className="btn-primary">Book Consultation</Link>
       </section>
     </PublicLayout>
   )
