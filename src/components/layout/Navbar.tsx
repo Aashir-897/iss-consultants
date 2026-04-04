@@ -55,7 +55,7 @@ export default function Navbar() {
         </ul>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link to="/contact" className="btn-outline hidden md:inline-block" style={{ padding: '9px 20px', fontSize: 11 }}>
+          <Link to="/contact" className="btn-outline hidden md:inline-block" style={{ padding: '9px 13px', fontSize: 11 }}>
             Book Consultation
           </Link>
           <button
