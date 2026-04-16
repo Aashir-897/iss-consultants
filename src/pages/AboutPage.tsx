@@ -4,17 +4,17 @@ import { useReveal } from '@/hooks/useReveal'
 
 const team = [
   { name:'Muhammad Usman', role:'Founder & Director', exp:'Visa & immigration specialist', initial:'M' },
-  { name:'Sara Fatima', role:'Lead Consultant', exp:'UK & Canada specialist', initial:'S' },
+  { name:'Sara Fatima', role:'Lead Consultant', exp:'UK, Ireland & Australia specialist', initial:'S' },
   { name:'Ali Hassan', role:'Student Advisor', exp:'300+ student placements', initial:'A' },
   { name:'Nida Rehman', role:'Documentation Head', exp:'Zero rejection record', initial:'N' },
 ]
 
 const milestones = [
   { year:'2020', event:'Instant Student Solution founded with a vision to make quality international education accessible.' },
-  { year:'2021', event:'Placed first 50 students abroad across UK, Canada, and Australia.' },
+  { year:'2021', event:'Placed first 50 students abroad across UK, Ireland, and Australia.' },
   { year:'2022', event:'Expanded to include PR applications and work permits. 100+ visa approvals.' },
-  { year:'2023', event:'Opened Lahore offices. 50+ university partners. 95%+ success rate.' },
-  { year:'2024', event:'Crossed 500+ successful placements. SECP registered.' },
+  { year:'2023', event:'Opened Karachi office in Orangi Town. 50+ university partners. 95%+ success rate.' },
+  { year:'2024', event:'Crossed 500+ successful placements, with growing specialization in Ireland and Australia.' },
   { year:'2026', event:'Officially incorporated under Companies Act 2017. CUIN: 0330889.' },
 ]
 

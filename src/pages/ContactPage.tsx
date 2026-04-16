@@ -34,7 +34,7 @@ export default function ContactPage() {
             {[
               { icon:'📞', label:'Phone & WhatsApp', value:'+92 331 5690099' },
               { icon:'✉️', label:'Email', value:'info@instantstudentsolution.com' },
-              { icon:'📍', label:'Office', value:'Lahore, Punjab, Pakistan' },
+              { icon:'📍', label:'Office', value:'House No. 103, Block K, Sector 11½ Muhammadabad Feroz Shah Colony, Orangi Town, Karachi West, Sindh, Pakistan' },
               { icon:'🕐', label:'Hours', value:'Mon – Sat\n10:00 AM – 6:00 PM' },
               { icon:'🏛️', label:'SECP Registration', value:'CUIN: 0330889\nCompanies Act, 2017' },
             ].map((c,i) => (
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 <label style={{ fontSize:10, letterSpacing:2, textTransform:'uppercase', color:'var(--text-muted)', display:'block', marginBottom:6 }}>Destination</label>
                 <select className="input-field" value={form.destination} onChange={e=>setForm({...form,destination:e.target.value})}>
                   <option value="">Select Country</option>
-                  {['UK','Canada','Australia','USA','Schengen','Ireland','New Zealand','Other'].map(v=><option key={v}>{v}</option>)}
+                  {['Ireland','Australia','United Kingdom','Other'].map(v=><option key={v}>{v}</option>)}
                 </select>
               </div>
             </div>

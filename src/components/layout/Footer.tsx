@@ -2,11 +2,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const destinations = [
-  { label: 'United Kingdom', to: '/destinations/united-kingdom' },
-  { label: 'Canada', to: '/destinations/canada' },
+  { label: 'Ireland', to: '/destinations/ireland' },
   { label: 'Australia', to: '/destinations/australia' },
-  { label: 'United States', to: '/destinations/united-states' },
-  { label: 'Schengen Europe', to: '/destinations/schengen' },
+  { label: 'United Kingdom', to: '/destinations/united-kingdom' },
 ]
 const services = [
   { label: 'Visa Counselling', to: '/services/visa-counselling' },
@@ -41,7 +39,7 @@ export default function Footer() {
             <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(20px, 4vw, 26px)', fontWeight: 300, marginBottom: 4 }}>
               Stay <span style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Informed</span>
             </h3>
-            <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>Latest visa news and updates for Pakistani students.</p>
+            <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>Get the latest Ireland, Australia and UK visa updates, news, and application tips for Pakistani students and professionals.</p>
           </div>
           <form onSubmit={handleSubscribe} className="newsletter-form">
             <input type="email" value={email} onChange={e => setEmail(e.target.value)}
@@ -67,7 +65,7 @@ export default function Footer() {
               Incorporated: 25th March 2026
             </p>
             <p style={{ fontSize: 12, color: 'var(--text-muted)', lineHeight: 1.8, maxWidth: 260, marginBottom: 20 }}>
-              Pakistan's trusted visa & student consultancy.
+              Pakistan's trusted visa & student consultancy for Ireland, Australia, and the United Kingdom.
             </p>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
               {['f', 'in', '▶', '✕'].map((s, i) => (

@@ -4,11 +4,9 @@ import PublicLayout from '@/components/layout/PublicLayout'
 import { getDestinations, getTestimonials, Destination, Testimonial } from '@/lib/api'
 
 const DEFAULT_DESTINATIONS: Destination[] = [
-  { id:1, name:'United Kingdom', slug:'united-kingdom', flag:'🇬🇧', visa_types:['Student','Work','Settlement','Visit'], description:'', is_active:true },
-  { id:2, name:'Canada', slug:'canada', flag:'🇨🇦', visa_types:['PR','Express Entry','Student'], description:'', is_active:true },
-  { id:3, name:'Australia', slug:'australia', flag:'🇦🇺', visa_types:['Student','Skilled Migration','Work'], description:'', is_active:true },
-  { id:4, name:'United States', slug:'united-states', flag:'🇺🇸', visa_types:['Student','B1/B2','Work'], description:'', is_active:true },
-  { id:5, name:'Schengen Europe', slug:'schengen', flag:'🇪🇺', visa_types:['Tourist','Student','Work'], description:'', is_active:true },
+  { id:1, name:'Ireland', slug:'ireland', flag:'🇮🇪', visa_types:['Student','Work','Critical Skills'], description:'', is_active:true },
+  { id:2, name:'Australia', slug:'australia', flag:'🇦🇺', visa_types:['Student','Skilled Migration','Work'], description:'', is_active:true },
+  { id:3, name:'United Kingdom', slug:'united-kingdom', flag:'🇬🇧', visa_types:['Student','Work','Settlement'], description:'', is_active:true },
 ]
 
 const SERVICES_DATA = [
@@ -22,7 +20,7 @@ const SERVICES_DATA = [
 
 const DEFAULT_TESTIMONIALS: Testimonial[] = [
   { id:1, name:'Zara Hussain', destination:'🇬🇧 UK Student Visa', text:'ISS made my UK student visa process completely stress-free. Their team guided me from university selection all the way to landing in London.', rating:5, is_active:true },
-  { id:2, name:'Hamza Malik', destination:'🇨🇦 Canada Student Visa', text:'After one rejection on my own, I came to ISS. They identified exactly what was wrong and got my Canadian student visa approved within 6 weeks.', rating:5, is_active:true },
+  { id:2, name:'Aisha Khan', destination:'🇮🇪 Ireland Student Visa', text:'ISS helped me secure my Irish study visa quickly and confidently. Their Ireland-focused team made the process easy and transparent.', rating:5, is_active:true },
   { id:3, name:'Fatima Akhtar', destination:'🇦🇺 Australia Student Visa', text:'The interview preparation sessions were incredible. I felt fully prepared and got my Australian visa approved. ISS team are true professionals.', rating:5, is_active:true },
 ]
 
@@ -186,7 +184,7 @@ export default function HomePage() {
             Where Will Your <em style={{ fontStyle:'italic', color:'var(--gold)' }}>Journey</em> Take You?
           </h2>
           <p style={{ fontSize:14, color:'var(--text-muted)', marginBottom:48, maxWidth:480 }}>
-            ISS specialises in visa applications for the world's most sought-after destinations.
+            ISS specialises in Ireland and Australia visa applications, with focused expertise for Pakistani students and professionals.
           </p>
           <div className="destinations-page-grid">
             {destinations.slice(0,5).map((d) => (
@@ -320,7 +318,7 @@ export default function HomePage() {
               Book a consultation with ISS and take the first step towards your international future.
             </p>
             {[
-              { icon:'📍', label:'Office', value:'Lahore, Pakistan' },
+              { icon:'📍', label:'Office', value:'House No. 103, Block K, Sector 11½ Muhammadabad Feroz Shah Colony, Orangi Town, Karachi West, Sindh' },
               { icon:'📞', label:'Phone & WhatsApp', value:'+92 331 5690099' },
               { icon:'✉️', label:'Email', value:'info@instantstudentsolution.com' },
               { icon:'🕐', label:'Hours', value:'Mon – Sat, 10 AM – 6 PM' },
@@ -363,7 +361,7 @@ export default function HomePage() {
                 <label style={{ fontSize:10, letterSpacing:2, textTransform:'uppercase', color:'var(--text-muted)', display:'block', marginBottom:6 }}>Destination</label>
                 <select className="input-field" value={form.destination} onChange={e => setForm({...form,destination:e.target.value})}>
                   <option value="">Select</option>
-                  {['UK','Canada','Australia','USA','Europe','Other'].map(v=><option key={v}>{v}</option>)}
+                  {['Ireland','Australia','United Kingdom','Other'].map(v=><option key={v}>{v}</option>)}
                 </select>
               </div>
             </div>

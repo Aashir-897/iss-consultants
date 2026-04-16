@@ -57,12 +57,12 @@ const servicesData: Record<string, {
   'work-permits': {
     title: 'Work Permit Services', icon: '💼',
     tagline: 'Build your international career with confidence',
-    description: 'Whether you\'re seeking employer-sponsored work permits, LMIA processing, or skills assessments, our team provides comprehensive support through every step of the work permit application process across multiple countries.',
+    description: 'Whether you\'re seeking employer-sponsored work permits, skills assessments, or critical skills permits, our team provides expert support for Ireland, Australia, and UK work visa applications.',
     features: [
       { title: 'Employer Sponsorship', desc: 'Guidance on securing employer sponsorship and understanding sponsor requirements.' },
-      { title: 'LMIA Assistance', desc: 'Complete Labour Market Impact Assessment processing for Canadian work permits.' },
-      { title: 'Skills Assessment', desc: 'Professional skills assessment preparation for Australian and New Zealand work visas.' },
-      { title: 'Points Optimization', desc: 'Maximizing your points score for points-based work visa systems.' },
+      { title: 'Employer Sponsorship Support', desc: 'Assistance with employer nomination and permit requirements for target work visas.' },
+      { title: 'Skills Assessment', desc: 'Professional skills assessment preparation for Australian work visas and EU professional recognition support.' },
+      { title: 'Points Optimization', desc: 'Maximizing your points score for Australia and Ireland skilled migration streams.' },
       { title: 'Post-Arrival Support', desc: 'Settlement guidance after arrival including accommodation and banking setup.' },
     ],
     process: [
@@ -72,7 +72,7 @@ const servicesData: Record<string, {
       { step: '04', title: 'Follow-up & Arrival', desc: 'Tracking application status and preparing for your move.' },
     ],
     faqs: [
-      { q: 'Do I need a job offer first?', a: 'For most work permits, yes. However, some programs like Express Entry don\'t require a job offer.' },
+      { q: 'Do I need a job offer first?', a: 'For most employer-sponsored work permits, yes. Some skilled migration streams may allow applications without a job offer.' },
       { q: 'Can you find me a job abroad?', a: 'We don\'t provide recruitment services, but we can guide you on job search strategies and platforms.' },
       { q: 'What if my work permit is refused?', a: 'We analyze the refusal reasons and advise on reapplication or alternative pathways.' },
     ],
@@ -80,12 +80,11 @@ const servicesData: Record<string, {
   'pr-applications': {
     title: 'Permanent Residency', icon: '🌍',
     tagline: 'Your pathway to a permanent new home',
-    description: 'Expert guidance through complex permanent residency pathways including Express Entry, Provincial Nominee Programs, skilled migration, and family sponsorship across Canada, Australia, New Zealand, and the UK.',
+    description: 'Expert guidance through permanent residency pathways for Ireland, Australia, and the UK, including skilled migration and family sponsorship options.',
     features: [
-      { title: 'PR Eligibility Assessment', desc: 'Comprehensive evaluation of your eligibility for PR across multiple countries.' },
-      { title: 'Express Entry Optimization', desc: 'Maximizing your CRS score for Canadian Express Entry draws.' },
-      { title: 'Points Maximization', desc: 'Strategic planning to improve your points for Australian and NZ skilled migration.' },
-      { title: 'PNP Guidance', desc: 'Navigating Provincial Nominee Programs for additional PR pathways.' },
+      { title: 'PR Eligibility Assessment', desc: 'Comprehensive evaluation of your eligibility for PR and long-term residence routes.' },
+      { title: 'Points Optimization', desc: 'Strategic planning to improve your score for Australian and Irish skilled migration streams.' },
+      { title: 'UK & Ireland PR Strategy', desc: 'Guidance on long-term residence options, work pathways, and family sponsorship in the UK and Ireland.' },
       { title: 'Citizenship Planning', desc: 'Long-term planning from PR to eventual citizenship.' },
     ],
     process: [
@@ -95,9 +94,9 @@ const servicesData: Record<string, {
       { step: '04', title: 'Submission & Tracking', desc: 'Filing the application and monitoring its progress.' },
     ],
     faqs: [
-      { q: 'How long does PR processing take?', a: 'It varies by country: Canada Express Entry takes 6-8 months, Australia 189 takes 6-12 months.' },
-      { q: 'Can my family be included?', a: 'Yes, most PR applications allow you to include your spouse and dependent children.' },
-      { q: 'What CRS score do I need for Canada?', a: 'Recent draws have been around 450-500 points, but this varies with each draw.' },
+      { q: 'How long does PR processing take?', a: 'It varies by pathway: Australian skilled migration can take 6-12 months, while Irish work and critical skills routes typically take 4-8 months.' },
+      { q: 'Can my family be included?', a: 'Yes, most PR and long-term residence applications allow you to include your spouse and dependent children.' },
+      { q: 'What points score do I need for skilled migration?', a: 'Australia and Ireland use points or qualification-based assessments; our team evaluates your profile to target the exact score for your chosen route.' },
     ],
   },
   'interview-prep': {

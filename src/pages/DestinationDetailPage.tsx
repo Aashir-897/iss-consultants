@@ -10,9 +10,9 @@ const destinationsData: Record<string, {
 }> = {
   'united-kingdom': {
     name: 'United Kingdom', flag: '🇬🇧',
-    description: 'The UK remains one of the top destinations for Pakistani nationals seeking world-class education and career opportunities.',
-    overview: 'The United Kingdom offers exceptional educational institutions, a thriving job market, and a multicultural society. With universities like Oxford, Cambridge, and Imperial College, the UK attracts thousands of Pakistani students every year. Post-study work visas allow graduates to stay and build careers.',
-    whyChoose: ['World-renowned universities ranked globally', 'Post-study work visa (Graduate Route) for 2-3 years', 'Multicultural society with large Pakistani diaspora', 'Strong healthcare system (NHS)', 'Pathway to settlement after 5 years'],
+    description: 'The UK remains one of the strongest destinations for study and work visas from Pakistan.',
+    overview: 'The United Kingdom offers top universities, strong post-study work options, and a well-established student support network. It remains a top choice for Pakistani students seeking quality education and career growth.',
+    whyChoose: ['World-renowned universities ranked globally', 'Post-study work visa (Graduate Route) for 2-3 years', 'Multicultural society with large Pakistani diaspora', 'Strong healthcare system (NHS)', 'Clear pathways to work and settlement'],
     stats: [
       { label: 'Pakistani Students/Year', value: '15,000+' },
       { label: 'Partner Universities', value: '50+' },
@@ -26,29 +26,11 @@ const destinationsData: Record<string, {
       { name: 'Settlement Visa', desc: 'For joining family members settled in the UK.', requirements: ['Sponsoring partner/family details', 'English language test (A1)', 'Financial requirement (£18,600+)', 'Accommodation proof', 'Relationship evidence'], processing: '8-12 weeks' },
     ],
   },
-  'canada': {
-    name: 'Canada', flag: '🇨🇦',
-    description: 'Canada\'s points-based immigration system is among the most accessible and welcoming in the world.',
-    overview: 'Canada consistently ranks as one of the best countries for immigrants. With programs like Express Entry and Provincial Nominee Programs, Canada offers clear pathways to permanent residency. The country boasts excellent universities, a strong economy, and a high quality of life.',
-    whyChoose: ['Express Entry system for fast PR processing', 'Post-Graduation Work Permit (PGWP) up to 3 years', 'Pathway to Canadian citizenship', 'Free healthcare system', 'Safe and welcoming multicultural society'],
-    stats: [
-      { label: 'Pakistani Students/Year', value: '20,000+' },
-      { label: 'Partner Institutions', value: '80+' },
-      { label: 'Visa Success Rate', value: '91%' },
-      { label: 'Avg Processing Time', value: '4-8 Weeks' },
-    ],
-    visa_types: [
-      { name: 'Study Permit', desc: 'For international students at DLIs.', requirements: ['Letter of Acceptance from DLI', 'Proof of funds (CAD 20,635/year)', 'Language proficiency', 'Medical exam', 'Police clearance'], processing: '4-8 weeks' },
-      { name: 'Express Entry (PR)', desc: 'Points-based PR for skilled workers.', requirements: ['CRS score calculation', 'Language test (IELTS/CELPIP)', 'Educational Credential Assessment', 'Work experience proof', 'Police clearance'], processing: '6-8 months' },
-      { name: 'Work Permit', desc: 'For workers with Canadian job offers.', requirements: ['Valid job offer', 'LMIA (if required)', 'Qualifications proof', 'Language proficiency', 'Medical exam'], processing: '4-12 weeks' },
-      { name: 'Provincial Nominee (PNP)', desc: 'Province-specific immigration programs.', requirements: ['Provincial nomination', 'Meet program criteria', 'Settlement funds', 'Language proficiency', 'Education credentials'], processing: '6-18 months' },
-    ],
-  },
   'australia': {
     name: 'Australia', flag: '🇦🇺',
-    description: 'Australia\'s skilled migration program actively seeks talented professionals and international students.',
-    overview: 'Australia combines world-class education with a relaxed lifestyle and strong economy. The country\'s skilled migration program is designed to attract global talent, and its universities consistently rank among the world\'s best. Post-study work rights make it an attractive destination for Pakistani students.',
-    whyChoose: ['Top universities (Group of Eight)', 'Post-study work visa up to 4 years', 'High minimum wage and quality of life', 'Points-based skilled migration', 'Beautiful climate and lifestyle'],
+    description: 'Australia is a strong second focus with excellent student and skilled migration pathways.',
+    overview: 'Australia combines world-class education with a relaxed lifestyle and strong demand for skilled workers. Its student and migration programs are ideal for Pakistani applicants who are seeking practical visa routes and quality living standards.',
+    whyChoose: ['Top universities (Group of Eight)', 'Post-study work visa up to 4 years', 'Points-based skilled migration', 'High standard of living', 'Supportive visa application guidance'],
     stats: [
       { label: 'Pakistani Students/Year', value: '12,000+' },
       { label: 'Partner Universities', value: '40+' },
@@ -62,47 +44,11 @@ const destinationsData: Record<string, {
       { name: 'Visitor Visa (600)', desc: 'For tourism or business visits.', requirements: ['Travel purpose proof', 'Financial capacity', 'Health insurance', 'Return ticket', 'Ties to home country'], processing: '2-4 weeks' },
     ],
   },
-  'united-states': {
-    name: 'United States', flag: '🇺🇸',
-    description: 'The USA remains a dream destination with Ivy League universities and Silicon Valley career opportunities.',
-    overview: 'The United States is home to the world\'s most prestigious universities and a dynamic job market. From Ivy League schools to tech hubs like Silicon Valley, the US offers unparalleled opportunities. OPT and H-1B pathways allow international students to build careers after graduation.',
-    whyChoose: ['World\'s top-ranked universities', 'OPT work authorization (1-3 years)', 'H-1B visa pathway for professionals', 'Diverse culture and experiences', 'Strong alumni networks globally'],
-    stats: [
-      { label: 'Pakistani Students/Year', value: '10,000+' },
-      { label: 'Partner Universities', value: '60+' },
-      { label: 'Visa Success Rate', value: '85%' },
-      { label: 'Avg Processing Time', value: '2-4 Weeks' },
-    ],
-    visa_types: [
-      { name: 'F-1 Student Visa', desc: 'For academic studies at US institutions.', requirements: ['I-20 from SEVP school', 'SEVIS fee payment', 'Financial evidence', 'English proficiency (TOEFL/IELTS)', 'Embassy interview'], processing: '2-4 weeks' },
-      { name: 'B1/B2 Visitor Visa', desc: 'For business or tourism visits.', requirements: ['DS-160 form', 'Embassy interview', 'Financial proof', 'Travel itinerary', 'Ties to home country'], processing: '2-4 weeks' },
-      { name: 'H-1B Work Visa', desc: 'For specialty occupation workers.', requirements: ['US employer sponsorship', 'Bachelor\'s degree minimum', 'Specialty occupation proof', 'LCA approval', 'Lottery selection'], processing: '3-6 months' },
-      { name: 'J-1 Exchange Visa', desc: 'For exchange visitor programs.', requirements: ['DS-2019 form', 'Program sponsor', 'English proficiency', 'Financial support', 'Home residency requirement'], processing: '2-4 weeks' },
-    ],
-  },
-  'schengen': {
-    name: 'Schengen Europe', flag: '🇪🇺',
-    description: 'Access to 26 European countries with a single Schengen visa for tourism, study, or business.',
-    overview: 'The Schengen Area comprises 26 European countries that allow free movement with a single visa. From the Eiffel Tower in Paris to the canals of Amsterdam, a Schengen visa opens doors to incredible travel, study, and business opportunities across Europe.',
-    whyChoose: ['Access to 26 countries with one visa', 'World-class European universities', 'Rich cultural experiences', 'Strong healthcare systems', 'Diverse career opportunities'],
-    stats: [
-      { label: 'Countries Covered', value: '26' },
-      { label: 'Pakistani Travelers/Year', value: '25,000+' },
-      { label: 'Visa Success Rate', value: '88%' },
-      { label: 'Avg Processing Time', value: '2-3 Weeks' },
-    ],
-    visa_types: [
-      { name: 'Tourist Visa (Type C)', desc: 'Short-stay visa for tourism up to 90 days.', requirements: ['Travel itinerary', 'Hotel bookings', 'Travel insurance (€30,000)', 'Financial proof', 'Return flight booking'], processing: '2-3 weeks' },
-      { name: 'Student Visa (Type D)', desc: 'Long-stay visa for studies in Europe.', requirements: ['University admission letter', 'Proof of funds', 'Health insurance', 'Accommodation proof', 'Language proficiency'], processing: '4-8 weeks' },
-      { name: 'Business Visa', desc: 'For business meetings and conferences.', requirements: ['Invitation letter from EU company', 'Business registration', 'Financial proof', 'Travel insurance', 'Return flight'], processing: '2-3 weeks' },
-      { name: 'Work Visa', desc: 'For employment in Schengen countries.', requirements: ['Job contract from EU employer', 'Work permit approval', 'Qualifications proof', 'Health insurance', 'Accommodation proof'], processing: '4-12 weeks' },
-    ],
-  },
   'ireland': {
     name: 'Ireland', flag: '🇮🇪',
-    description: 'Ireland\'s booming tech sector and English-speaking environment make it ideal for students and professionals.',
-    overview: 'Ireland has emerged as Europe\'s tech hub, hosting headquarters of Google, Facebook, Apple, and many more. Its English-speaking environment, welcoming culture, and strong economy make it an increasingly popular destination for Pakistani students and professionals.',
-    whyChoose: ['Europe\'s Silicon Valley (tech giants HQ)', 'English-speaking country', 'Stay Back visa (1-2 years post-study)', 'Gateway to EU job market', 'Friendly and safe society'],
+    description: 'Ireland is our core specialization, especially for student visas and critical skills work permits.',
+    overview: 'Ireland is Europe\'s English-speaking tech hub, hosting the regional offices of many global giants. Our team specializes in Irish study visas, critical skills permits, and post-study work pathways, helping Pakistani clients secure fast and reliable approvals.',
+    whyChoose: ['Specialized Ireland visa expertise', 'English-speaking country with strong tech growth', 'Stay Back visa (1-2 years post-study)', 'Gateway to EU employment opportunities', 'Fast, transparent guidance for Pakistani applicants'],
     stats: [
       { label: 'Pakistani Students/Year', value: '3,000+' },
       { label: 'Partner Universities', value: '20+' },
@@ -113,40 +59,6 @@ const destinationsData: Record<string, {
       { name: 'Study Visa', desc: 'For courses longer than 3 months.', requirements: ['Letter of acceptance', 'Proof of fees paid', 'Financial evidence (€10,000)', 'Health insurance', 'English proficiency'], processing: '4-8 weeks' },
       { name: 'Critical Skills Permit', desc: 'For highly skilled professionals.', requirements: ['Job offer (€64,000+ salary)', 'Relevant qualifications', 'Employer registration', 'Experience proof', 'Police clearance'], processing: '4-6 weeks' },
       { name: 'General Work Permit', desc: 'For workers in eligible occupations.', requirements: ['Job offer (€34,000+ salary)', 'Labour market test', 'Qualifications proof', 'Employer compliance', 'Health insurance'], processing: '4-8 weeks' },
-    ],
-  },
-  'new-zealand': {
-    name: 'New Zealand', flag: '🇳🇿',
-    description: 'New Zealand offers a skilled migrant pathway, world-class education, and the highest quality of life.',
-    overview: 'New Zealand is known for its stunning landscapes, excellent education system, and welcoming immigration policies. The country actively seeks skilled migrants and international students, offering clear pathways to residency and citizenship.',
-    whyChoose: ['Skilled Migrant Category for PR', 'Post-study work visa (1-3 years)', 'Safe and peaceful society', 'World-class quality of life', 'Beautiful natural environment'],
-    stats: [
-      { label: 'Pakistani Students/Year', value: '2,500+' },
-      { label: 'Partner Institutions', value: '15+' },
-      { label: 'Visa Success Rate', value: '92%' },
-      { label: 'Avg Processing Time', value: '4-6 Weeks' },
-    ],
-    visa_types: [
-      { name: 'Student Visa', desc: 'For studying at NZ institutions.', requirements: ['Offer of place', 'Proof of funds (NZ$20,000/year)', 'English proficiency', 'Health insurance', 'Police clearance'], processing: '4-6 weeks' },
-      { name: 'Skilled Migrant (SMC)', desc: 'Points-based resident visa.', requirements: ['Points assessment (160+)', 'Job offer or skilled employment', 'Qualifications assessment', 'English proficiency', 'Health & character'], processing: '6-12 months' },
-      { name: 'Essential Skills Work Visa', desc: 'For workers with NZ job offers.', requirements: ['Job offer from NZ employer', 'Skills match', 'Labour market test', 'Health insurance', 'Police clearance'], processing: '4-8 weeks' },
-    ],
-  },
-  'malaysia': {
-    name: 'Malaysia', flag: '🇲🇾',
-    description: 'A budget-friendly option with excellent universities and a vibrant multicultural society.',
-    overview: 'Malaysia offers quality education at affordable costs, making it an increasingly popular destination for Pakistani students. The country\'s multicultural society, halal food availability, and Muslim-friendly environment make it a comfortable choice. Several Malaysian universities rank among Asia\'s best.',
-    whyChoose: ['Affordable tuition and living costs', 'Muslim-friendly environment', 'Halal food widely available', 'Internationally recognized degrees', 'Strategic location in Southeast Asia'],
-    stats: [
-      { label: 'Pakistani Students/Year', value: '5,000+' },
-      { label: 'Partner Universities', value: '25+' },
-      { label: 'Visa Success Rate', value: '95%' },
-      { label: 'Avg Processing Time', value: '2-4 Weeks' },
-    ],
-    visa_types: [
-      { name: 'Student Pass', desc: 'For full-time students at Malaysian institutions.', requirements: ['University acceptance letter', 'Financial proof', 'Medical examination', 'Passport validity (18+ months)', 'Academic transcripts'], processing: '2-4 weeks' },
-      { name: 'Employment Pass', desc: 'For professionals with Malaysian job offers.', requirements: ['Job offer letter', 'Minimum salary (RM5,000+)', 'Qualifications proof', 'Company sponsorship', 'Medical examination'], processing: '4-8 weeks' },
-      { name: 'MM2H Visa', desc: 'Malaysia My Second Home long-term visa.', requirements: ['Financial proof (RM500,000+)', 'Monthly income (RM40,000+)', 'Medical report', 'Police clearance', 'Health insurance'], processing: '3-6 months' },
     ],
   },
 }
@@ -262,7 +174,7 @@ export default function DestinationDetailPage() {
           Ready for <em style={{ fontStyle: 'italic', color: 'var(--gold)' }}>{dest.name}</em>?
         </h2>
         <p style={{ fontSize: 15, color: 'var(--text-muted)', marginBottom: 40, maxWidth: 480, margin: '0 auto 40px' }}>
-          Book a free consultation with our {dest.name} visa specialists today.
+          Book a consultation with our {dest.name} visa specialists today.
         </p>
         <Link to="/contact" className="btn-primary">Book Consultation</Link>
       </section>

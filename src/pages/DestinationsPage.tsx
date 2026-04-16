@@ -5,14 +5,9 @@ import { getDestinations, Destination } from '@/lib/api'
 import { useReveal } from '@/hooks/useReveal'
 
 const DEFAULT: Destination[] = [
-  { id:1, name:'United Kingdom', slug:'united-kingdom', flag:'🇬🇧', visa_types:['Student','Work','Settlement','Visit'], description:'The UK remains one of the top destinations for Pakistani nationals. World-class universities and career opportunities.', is_active:true },
-  { id:2, name:'Canada', slug:'canada', flag:'🇨🇦', visa_types:['PR','Express Entry','Student','Work'], description:'Canada\'s points-based immigration system is among the most accessible in the world.', is_active:true },
-  { id:3, name:'Australia', slug:'australia', flag:'🇦🇺', visa_types:['Student','Skilled Migration','Work','Visit'], description:'Australia\'s skilled migration program actively seeks talented professionals.', is_active:true },
-  { id:4, name:'United States', slug:'united-states', flag:'🇺🇸', visa_types:['Student','B1/B2','Work','H1B'], description:'The USA remains a dream destination. From Ivy League to Silicon Valley careers.', is_active:true },
-  { id:5, name:'Schengen Europe', slug:'schengen', flag:'🇪🇺', visa_types:['Tourist','Student','Work'], description:'Access to 26 European countries with a single visa.', is_active:true },
-  { id:6, name:'Ireland', slug:'ireland', flag:'🇮🇪', visa_types:['Student','Work','Critical Skills'], description:'Ireland\'s booming tech sector and English-speaking environment.', is_active:true },
-  { id:7, name:'New Zealand', slug:'new-zealand', flag:'🇳🇿', visa_types:['Skilled Migrant','Student','Work'], description:'New Zealand offers a skilled migrant pathway and high quality of life.', is_active:true },
-  { id:8, name:'Malaysia', slug:'malaysia', flag:'🇲🇾', visa_types:['Student','Work','MM2H'], description:'A budget-friendly option with excellent universities.', is_active:true },
+  { id:1, name:'Ireland', slug:'ireland', flag:'🇮🇪', visa_types:['Student','Work','Critical Skills'], description:'Ireland is our specialty, with dedicated support for Irish study visas and work permits.', is_active:true },
+  { id:2, name:'Australia', slug:'australia', flag:'🇦🇺', visa_types:['Student','Skilled Migration','Work','Visit'], description:'Australia is a key focus area, especially for skilled migration and student visa approvals.', is_active:true },
+  { id:3, name:'United Kingdom', slug:'united-kingdom', flag:'🇬🇧', visa_types:['Student','Work','Settlement','Visit'], description:'The UK remains a trusted destination offering strong study and work pathways for Pakistani applicants.', is_active:true },
 ]
 
 export default function DestinationsPage() {
@@ -33,7 +28,7 @@ export default function DestinationsPage() {
             Your <em style={{ fontStyle:'italic', color:'var(--gold)' }}>World</em> Awaits
           </h1>
           <p style={{ fontSize:'clamp(14px,2vw,17px)', color:'var(--text-light)', lineHeight:1.9, maxWidth:560 }}>
-            Expert visa consultancy for Pakistan's most sought-after international destinations.
+            Expert visa consultancy focused on Ireland and Australia, with support for Pakistani students and professionals.
           </p>
         </div>
       </section>
