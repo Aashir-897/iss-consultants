@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import { useReveal } from '@/hooks/useReveal'
 
 const team = [
-  { name:'Muhammad Usman', role:'Founder & Director', exp:'Visa & immigration specialist', initial:'M' },
-  { name:'Sara Fatima', role:'Lead Consultant', exp:'UK, Ireland & Australia specialist', initial:'S' },
-  { name:'Ali Hassan', role:'Student Advisor', exp:'300+ student placements', initial:'A' },
+  { name:'Farzan Ahmed', role:'Founder & Director', exp:'Visionary leader with strong visa and business strategy experience', initial:'F' },
+  { name:'Usama Alam', role:'Founder & Director', exp:'Specialist in Ireland and Australia visa pathways', initial:'U' },
+  { name:'Muhammad Kamran', role:'Lead Consultant & Student Advisor', exp:'Lead consultant for student visa strategy', initial:'M' },
   { name:'Nida Rehman', role:'Documentation Head', exp:'Zero rejection record', initial:'N' },
 ]
 
