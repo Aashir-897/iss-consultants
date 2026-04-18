@@ -49,7 +49,7 @@ export default function TermsPage() {
 
             <div>
               <h2 style={{ fontSize: 18, color: 'var(--cream)', fontFamily: 'Cormorant Garamond, serif', marginBottom: 8 }}>8. Contact</h2>
-              <p>Instant Student Solution (Pvt) Ltd.<br />SECP Registered | CUIN: 0330889<br />Email: info@issconsultants.pk<br />Phone: +92 331 5690099</p>
+              <p>Instant Student Solution (Pvt) Ltd.<br />SECP Registered | CUIN: 0330889<br />Email: info@issconsultants.pk<br />Phone: +92 335 2397730</p>
             </div>
           </div>
         </div>

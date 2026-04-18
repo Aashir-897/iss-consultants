@@ -89,10 +89,10 @@ const emailBase = (content) => `
                 SECP Registered &nbsp;|&nbsp; CUIN: 0330889
               </p>
               <p style="font-size:11px;color:#444;margin:0 0 4px;line-height:1.7;">
-                House No. 103, Block K, Orangi Town, Karachi West, Sindh, Pakistan
+                House No. 103, Block K, Karachi West, Sindh, Pakistan
               </p>
               <p style="font-size:11px;color:#444;margin:0 0 14px;">
-                +92 331 5690099 &nbsp;|&nbsp; info@instantstudentsolution.com
+                +92 335 2397730 &nbsp;|&nbsp; info@instantstudentsolution.com
               </p>
               <a href="${SITE_URL}" style="font-size:9px;letter-spacing:2px;text-transform:uppercase;
                 color:#c9a84c;text-decoration:none;">www.instantstudentsolution.com</a>
@@ -181,7 +181,7 @@ const userContactHtml = ({ name, phone, visa_type, destination, message }) =>
 
     <p style="font-size:12px;color:#555;line-height:1.8;margin:0;">
       For urgent queries, contact us at
-      <span style="color:#c9a84c;">+92 331 5690099</span> or simply reply to this email.
+      <span style="color:#c9a84c;">+92 335 2397730</span> or simply reply to this email.
     </p>
   `)
 

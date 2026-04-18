@@ -39,12 +39,12 @@ export default function PrivacyPolicyPage() {
 
             <div>
               <h2 style={{ fontSize: 18, color: 'var(--cream)', fontFamily: 'Cormorant Garamond, serif', marginBottom: 8 }}>6. Your Rights</h2>
-              <p>You have the right to access, correct, or delete your personal data. To exercise these rights, contact us at info@issconsultants.pk or call +92 331 5690099.</p>
+              <p>You have the right to access, correct, or delete your personal data. To exercise these rights, contact us at info@issconsultants.pk or call +92 335 2397730.</p>
             </div>
 
             <div>
               <h2 style={{ fontSize: 18, color: 'var(--cream)', fontFamily: 'Cormorant Garamond, serif', marginBottom: 8 }}>7. Contact Us</h2>
-              <p>Instant Student Solution (Pvt) Ltd.<br />SECP Registered | CUIN: 0330889<br />Email: info@issconsultants.pk<br />Phone: +92 331 5690099</p>
+              <p>Instant Student Solution (Pvt) Ltd.<br />SECP Registered | CUIN: 0330889<br />Email: info@issconsultants.pk<br />Phone: +92 335 2397730</p>
             </div>
           </div>
         </div>

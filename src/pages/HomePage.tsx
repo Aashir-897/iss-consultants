@@ -345,7 +345,7 @@ export default function HomePage() {
             </p>
             {[
               { icon:'📍', label:'Office', value:'House No. 103, Block K, Sector 11½ Muhammadabad Feroz Shah Colony, Karachi West, Sindh' },
-              { icon:'📞', label:'Phone & WhatsApp', value:'+92 331 5690099' },
+              { icon:'📞', label:'Phone & WhatsApp', value:'+92 335 2397730' },
               { icon:'✉️', label:'Email', value:'info@instantstudentsolution.com' },
               { icon:'🕐', label:'Hours', value:'Mon – Sat, 10 AM – 6 PM' },
             ].map((c,i) => (
