@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import PublicLayout from '@/components/layout/PublicLayout'
 import { getDestinations, getTestimonials, Destination, Testimonial } from '@/lib/api'
+import { submitContactRequest } from '@/lib/email'
+import { toast } from '@/components/ui/use-toast'
+  
 
 const DEFAULT_DESTINATIONS: Destination[] = [
   { id:1, name:'Ireland', slug:'ireland', flag:'🇮🇪', visa_types:['Student','Work','Critical Skills'], description:'', is_active:true },
@@ -70,10 +73,14 @@ export default function HomePage() {
   const [activeService, setActiveService] = useState(0)
   const [form, setForm] = useState({ name:'', email:'', phone:'', visa_type:'', destination:'', message:'' })
   const [submitting, setSubmitting] = useState(false)
+  
+  
 
   const whyRef = useReveal(); const destRef = useReveal()
   const svcRef = useReveal(); const procRef = useReveal()
   const testRef = useReveal(); const ctaRef = useReveal()
+  const emptyForm = { name:'', email:'', phone:'', visa_type:'', destination:'', message:'' }
+
 
   useEffect(() => {
     getDestinations().then(r => setDestinations(r.data)).catch(() => {})
@@ -81,10 +88,29 @@ export default function HomePage() {
   }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubmitting(true)
-    setTimeout(() => { setSubmitting(false); setForm({ name:'', email:'', phone:'', visa_type:'', destination:'', message:'' }) }, 1000)
-  }
+      e.preventDefault()
+      setSubmitting(true)
+  
+      try {
+        await submitContactRequest(form)
+  
+        toast({
+          title: 'Request submitted',
+          description: 'Your message has been sent to our team and a confirmation email is on its way.',
+        })
+  
+        setForm(emptyForm)
+      } catch (error) {
+        console.error('Contact form submit failed', error)
+        toast({
+          title: 'Submission failed',
+          description: 'There was a problem sending your request. Please try again later.',
+          variant: 'destructive',
+        })
+      } finally {
+        setSubmitting(false)
+      }
+    }
 
   const S = SERVICES_DATA[activeService]
 
@@ -318,7 +344,7 @@ export default function HomePage() {
               Book a consultation with ISS and take the first step towards your international future.
             </p>
             {[
-              { icon:'📍', label:'Office', value:'House No. 103, Block K, Sector 11½ Muhammadabad Feroz Shah Colony, Orangi Town, Karachi West, Sindh' },
+              { icon:'📍', label:'Office', value:'House No. 103, Block K, Sector 11½ Muhammadabad Feroz Shah Colony, Karachi West, Sindh' },
               { icon:'📞', label:'Phone & WhatsApp', value:'+92 331 5690099' },
               { icon:'✉️', label:'Email', value:'info@instantstudentsolution.com' },
               { icon:'🕐', label:'Hours', value:'Mon – Sat, 10 AM – 6 PM' },

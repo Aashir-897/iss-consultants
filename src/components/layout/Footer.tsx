@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { toast } from '@/components/ui/use-toast'
+import { subscribeNewsletter } from '@/lib/email' 
 
 const destinations = [
   { label: 'Ireland', to: '/destinations/ireland' },
@@ -21,13 +23,30 @@ const company = [
   { label: 'Terms of Service', to: '/terms' },
 ]
 
-export default function Footer() {
-  const [email, setEmail] = useState('')
+  export default function Footer() {
+    const [email, setEmail] = useState('')
 
-  const handleSubscribe = async (e: React.FormEvent) => {
+    const handleSubscribe = async (e: React.FormEvent) => {
+
     e.preventDefault()
     if (!email) return
+    
+
+    try {
+    await subscribeNewsletter({email})
+    toast({
+      title: 'Subscribed!',
+      description: 'Check your inbox for a confirmation email.',
+    })
     setEmail('')
+    } catch (error) {
+      console.error('Newsletter subscribe failed', error)
+      toast({
+        title: 'Failed',
+        description: 'Could not subscribe. Please try again.',
+        variant: 'destructive',
+      })
+    }
   }
 
   return (

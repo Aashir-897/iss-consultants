@@ -26,7 +26,7 @@ api.interceptors.response.use(
 export default api
 
 export const submitConsultation = (data: ConsultationForm) => api.post('/consultations', data)
-export const subscribeNewsletter = (email: string) => api.post('/newsletter', { email })
+export const subscribeNewsletter = (data: Newsletter) => api.post('/newsletter', data)
 export const getDestinations = () => api.get('/destinations')
 export const getDestination = (slug: string) => api.get(`/destinations/${slug}`)
 export const getServices = () => api.get('/services')
@@ -39,6 +39,11 @@ export interface ConsultationForm {
   name: string; email: string; phone: string
   visa_type: string; destination: string; message?: string
 }
+
+export interface Newsletter {
+  email: string
+}
+
 
 export interface Destination {
   id: number; name: string; slug: string; flag: string

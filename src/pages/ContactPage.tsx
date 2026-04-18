@@ -1,14 +1,37 @@
 import { useState } from 'react'
 import PublicLayout from '@/components/layout/PublicLayout'
+import { toast } from '@/components/ui/use-toast'
+import { submitContactRequest } from '@/lib/email'
+
+const emptyForm = { name:'', email:'', phone:'', visa_type:'', destination:'', message:'' }
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name:'', email:'', phone:'', visa_type:'', destination:'', message:'' })
+  const [form, setForm] = useState(emptyForm)
   const [submitting, setSubmitting] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitting(true)
-    setTimeout(() => { setSubmitting(false); setForm({ name:'', email:'', phone:'', visa_type:'', destination:'', message:'' }) }, 1000)
+
+    try {
+      await submitContactRequest(form)
+
+      toast({
+        title: 'Request submitted',
+        description: 'Your message has been sent to our team and a confirmation email is on its way.',
+      })
+
+      setForm(emptyForm)
+    } catch (error) {
+      console.error('Contact form submit failed', error)
+      toast({
+        title: 'Submission failed',
+        description: 'There was a problem sending your request. Please try again later.',
+        variant: 'destructive',
+      })
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -34,7 +57,7 @@ export default function ContactPage() {
             {[
               { icon:'📞', label:'Phone & WhatsApp', value:'+92 331 5690099' },
               { icon:'✉️', label:'Email', value:'info@instantstudentsolution.com' },
-              { icon:'📍', label:'Office', value:'House No. 103, Block K, Sector 11½ Muhammadabad Feroz Shah Colony, Orangi Town, Karachi West, Sindh, Pakistan' },
+              { icon:'📍', label:'Office', value:'House No. 103, Block K, Sector 11½ Muhammadabad Feroz Shah Colony, Karachi West, Sindh, Pakistan' },
               { icon:'🕐', label:'Hours', value:'Mon – Sat\n10:00 AM – 6:00 PM' },
               { icon:'🏛️', label:'SECP Registration', value:'CUIN: 0330889\nCompanies Act, 2017' },
             ].map((c,i) => (

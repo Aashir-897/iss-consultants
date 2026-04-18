@@ -321,6 +321,7 @@ export default function ServiceDetailPage() {
         </p>
         <Link to="/contact" className="btn-primary">Book Consultation</Link>
       </section>
+
     </PublicLayout>
   )
 }
